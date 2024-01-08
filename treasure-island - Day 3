@@ -1,0 +1,60 @@
+print('''
+          .-------------------------------.
+          |  Island                       |
+          | .---------------------------. |
+          | |!!!!!!!!!!!!!!!!!!!!!!!!!!!| |
+          | |!!!!!!!!!!!/\%%%%%%%%%%%%%%| | 
+          | |!!!!!!!!!!/||\%%%%%%%%%%%%%| |
+          | |!!!!!!!!!/||||\%%%%%%%%%%%%| |
+          | !!!!!!!!!/||||||\%%%%%%%%%%%| |
+          | |!!!!!!!/||||||||\%%%%%%%%%%| |
+          | |xxxxxxxxxxxxxxxxxxxxxxxxxxx| |
+          | |xxxxxxxxxxxxxxxxxxxxxxxxxxx| |
+          | `---------------------------' |
+          | Land                          |
+          | .---------------------------. |
+          | |            ,              | |
+          | |           /(              | |
+          | |          /  \             | |
+          | |         (   ))            | |
+          | |          `--'             | |
+          | |___________________________| |
+          |      Illus.Tony Szczudlo      |
+          |tm&C1993-1994 WoTC,Inc. 335/350|
+          `-------------------------------´
+          ''')
+#print("Welcome to Treasure Island.")
+#print("Your mission is to find the treasure.") 
+
+#https://www.draw.io/?lightbox=1&highlight=0000ff&edit=_blank&layers=1&nav=1&title=Treasure%20Island%20Conditional.drawio#Uhttps%3A%2F%2Fdrive.google.com%2Fuc%3Fid%3D1oDe4ehjWZipYRsVfeAx2HyB7LCQ8_Fvi%26export%3Ddownload
+
+#Write your code below this line 👇
+print("Welcome to Treasure Island Game.\nYour mission is to find the treasure.\n")
+print("From your window, you see an island in the distance. You were told that there is a treasure on the island...")
+decision_1 =input("You leave your house and you see a biforcation. To you want to go left or right? ")
+decision_1 = decision_1.lower()
+
+if decision_1 == "left":
+  
+  decision_2 =input("You reach the shore and you see a boat.\n\nDo you want to sail or swim? ")
+  decision_2 = decision_2.lower()
+  if decision_2 == "sail":
+    print("You sail to the island safely. \n")
+    
+    decision_3 =input("As you walk in the island you find a building with three doors standing in front of you. A Red one, a Yellow one and a Blue one.\nWhich door do you want to open? ")
+    decision_3 = decision_3.lower()
+    
+    if decision_3 == "yellow":
+      print("You open the door and find a treasure chest. You Win!")
+    elif decision_3 == "red":
+      print("As you close the door a huge fire starts and burns you to death. GAME OVER")
+    elif decision_3 == "blue":
+      print("You enter the room. It's totally dark inside. You hear something breathing by your side. A huge beast emerges from the darkness   and eats you. GAME OVER")
+    else:
+     print("GAME OVER")
+  
+  else:
+    print("As you swim to the island a shark eats you. GAME OVER")
+
+else:
+  print("You reach a dead end and you hear a voice. Behind you is a thief that kills you. GAME OVER")
