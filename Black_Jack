@@ -1,0 +1,111 @@
+############### Blackjack Project #####################
+
+
+import random
+from art import logo
+deck = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
+dealer_cards = []
+player_hand = []
+
+def evaluation(player_hand,dealer_cards):
+    """Checks your value against the dealers"""
+    score = sum(player_hand)
+    print(f"Dealer's final hand: {dealer_cards}, final score: {sum(dealer_cards)}")
+
+    if 11 in dealer_cards and sum(dealer_cards) > 21:
+        dealer_cards.remove(11)
+        dealer_cards.append(1)
+        print(f"Ace 11 or 1: {dealer_cards}")
+
+    if sum(dealer_cards) > 21:
+        print("You Win!")
+    elif score == sum(dealer_cards):
+        print("It's a Draw Baby")
+    elif score < sum(dealer_cards):
+        print("You loose.")
+    else:
+        print("You Win!")
+
+def get_another_card(player_hand):
+
+    player_hand.append(random.choice(deck))
+
+    if 11 in player_hand and sum(player_hand) > 21:
+        player_hand.remove(11)
+        player_hand.append(1)
+        print(f"Ace 11 or 1: {player_hand}")
+
+    if sum(player_hand) > 21:
+        print(f"Your cards: {player_hand}, current score: {sum(player_hand)}")
+        print("You went over 21 and lost.")
+        black_jack(dealer_cards,player_hand)
+
+    else:
+        print(f"Your cards: {player_hand}, current score: {sum(player_hand)}")
+        return sum(player_hand)
+
+def ask_another_card(player_hand,dealer_cards):
+    another_card = input("Type 'y' to get another card, type 'n' to pass: ")
+    if another_card == "y":
+        score = get_another_card(player_hand)
+
+        if score == 21:
+            evaluation(player_hand, dealer_cards)
+            black_jack(dealer_cards,player_hand)
+
+        print(f"Dealer's first card: {dealer_cards[0]}")
+        ask_another_card(player_hand,dealer_cards)
+
+    else:
+        print(f"Your final hand: {player_hand}, final score: {sum(player_hand)}")
+
+def dealer_hand(dealer_cards):
+    while sum(dealer_cards) < 17:
+        dealer_cards.append(random.choice(deck))
+    return dealer_cards
+
+def is_blackJack(player_hand,dealer_cards):
+    """Takes player_hand and dealer_cards to check if there is a BlackJack"""
+
+    if sum(dealer_cards) == 21:
+        print(f"You loose, Dealer has BlackJack {dealer_cards}")
+        black_jack(dealer_cards, player_hand)
+
+    elif sum(player_hand) == 21:
+        print(f"You Win!, It is a BlackJack {player_hand}")
+        print(f"Dealer's hand {dealer_cards}")
+        black_jack(dealer_cards, player_hand)
+
+#################################### MAIN FUNCTION #############################################################3
+
+def black_jack(dealer_cards, player_hand):
+    # Code Start
+    start_game = input("Do you want to play a game of Blackjack? Type 'y' or 'n': ")
+
+    if start_game == "y":
+        print(logo)
+
+        # player initial hand
+        player_hand = random.choices(deck, k=2)
+        print(f"Your cards: {player_hand}, current score: {sum(player_hand)}")
+        # dealer initial hand
+        dealer_cards = random.choices(deck, k=2)
+        #Checks if there is a blackjack among player's or dealer's hand
+        is_blackJack(player_hand,dealer_cards)
+
+        print(f"Computer's first card: {dealer_cards[0]}")
+        ask_another_card(player_hand,dealer_cards)
+
+    else:
+        exit()
+
+    check_dealer = dealer_hand(dealer_cards)
+
+    evaluation(player_hand,check_dealer)
+
+    black_jack(dealer_cards,player_hand)
+
+
+black_jack(dealer_cards,player_hand)
+
+
