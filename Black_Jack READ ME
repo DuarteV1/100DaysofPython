@@ -1,0 +1,47 @@
+**Blackjack Game**
+This is a simple command-line implementation of the classic Blackjack card game. You can play against the computer, which acts as the dealer. 
+The objective of the game is to beat the dealer by having a hand value that is closer to 21 without exceeding it.
+
+**Game Rules**
+The deck is unlimited in size and there are no jokers.
+Cards are represented by numbers:
+  Numbers 2-10 have their face values.
+  Jacks, Queens, and Kings are worth 10 points.
+  Aces can be worth either 11 or 1, depending on which is more favorable for the hand.
+  The game is played against a dealer (the computer), and cards are drawn with equal probability.
+  Cards are not removed from the deck after being drawn, so they can appear multiple times.
+
+**Features**
+The player is dealt two cards at the start of the game.
+The dealer is also dealt two cards, but only one card is visible to the player.
+The player can choose to either draw another card (hit) or stop (stand).
+The dealer will continue drawing cards until its hand total is at least 17.
+The player or dealer wins by having a hand value closest to 21 without exceeding it. If a hand exceeds 21, it "busts" and loses.
+A Blackjack is when the player or dealer has exactly 21 with the first two cards dealt. A Blackjack wins the game immediately.
+
+**How to Play**
+Starting the Game: The player is prompted to start a new game of Blackjack by typing 'y' (yes) or 'n' (no).
+
+Player's Turn: The player is dealt two cards and can choose to either:
+  Draw another card by typing 'y'.
+  Stop drawing by typing 'n'.
+
+Dealer's Turn: The dealer's cards are revealed, and the dealer will draw additional cards until their hand value reaches 17 or more.
+
+Result: The winner is determined based on the hand totals:
+  If the player's hand exceeds 21, they lose immediately.
+  If both the player and the dealer have the same hand value, the game is a draw.
+  The player wins if their hand is closer to 21 than the dealer’s hand.
+
+**Special Conditions**
+If the player or the dealer has a Blackjack (exactly 21 points with the first two cards), the game ends immediately, and the Blackjack holder wins.
+Aces (represented by 11) are adjusted to be worth 1 if the hand total exceeds 21.
+
+**How the Code Works**
+Main Game Loop: The game runs in a loop where the player is continuously prompted to start a new game or exit.
+Player Actions: The player can keep drawing cards until they choose to stop or go over 21 points.
+Dealer Actions: The dealer automatically draws cards until their total reaches 17 or more.
+Evaluation: At the end of the game, both hands are evaluated to determine the winner.
+
+**Requirements**
+This program runs in Python and uses the random module to simulate card draws.
