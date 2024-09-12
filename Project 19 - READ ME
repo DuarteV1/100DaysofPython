@@ -1,0 +1,59 @@
+# Turtle Race Game
+
+**How to Play**:
+  1. Choose your favorite turtle color to bet on.
+  2. Watch the turtles race as they move randomly towards the finish line.
+  3. If your chosen turtle wins the race, you win! If not, you lose.
+
+## Features
+
+- **Colorful Turtles**: Six turtles, each with a unique color representing the colors of the rainbow.
+- **Random Movement**: Each turtle moves a random distance on each step, adding excitement and unpredictability to the race.
+- **Interactive Betting**: Input your bet to select which turtle you think will win the race.
+- **Finish Line**: A prominent finish line is drawn to indicate where the race ends.
+
+## How to Run
+
+1. **Requirements**:
+   - Python installed on your machine.
+   - The `turtle` module, which is included with standard Python installations.
+
+2. **Running the Game**:
+   - Save the script to a file, e.g., `turtle_race.py`.
+   - Open a terminal or command prompt.
+   - Run the script using Python:
+     ```bash
+     python turtle_race.py
+     ```
+
+3. **Playing the Game**:
+   - When prompted, enter the color of the turtle you want to bet on.
+   - Watch the turtles race across the screen.
+   - A message will be displayed indicating whether your turtle won or lost.
+
+## Code Breakdown
+
+- **Setup**:
+  - Initializes the game screen and sets up the finish line.
+  - Creates and positions six turtles with different colors.
+
+- **Game Logic**:
+  - Prompts the user to bet on a turtle.
+  - Starts the race and moves turtles forward by random distances.
+  - Determines the winner when a turtle crosses the finish line and displays the result.
+
+## Important Functions
+
+- `finish_line_draw()`: Draws the finish line where the turtles will race to.
+- `screen.textinput()`: Prompts the user to enter their bet.
+- `turtle.forward()`: Moves the turtle forward by a random distance in each step.
+
+## Notes
+
+- The race will continue until one turtle crosses the finish line.
+- The result of the race is displayed both on the screen and in the terminal/command prompt.
+
+## Troubleshooting
+
+- **Turtles Not Moving**: Ensure that Python and the `turtle` module are correctly installed. The turtles should move with each race iteration.
+- **No Display**: If the window doesn't appear, make sure your Python environment supports GUI operations.
