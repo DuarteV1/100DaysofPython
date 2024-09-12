@@ -1,0 +1,60 @@
+import turtle
+import random
+
+screen = turtle.Screen()
+screen.setup(width=500, height=400)
+is_race_on = False
+t = turtle.Turtle("turtle")
+t.hideturtle()
+
+def finish_line_draw():
+    finish_line = turtle.Turtle("turtle")
+    finish_line.penup()
+    finish_line.goto(x= 250, y= -200)
+    finish_line.pendown()
+    finish_line.left(90)
+    finish_line.pensize(30)
+    finish_line.forward(400)
+
+
+rainbow_colours = ["red", "orange", "yellow", "green","pink", "blue", "purple"]
+user_bet = screen.textinput(f"Make your bet!", f"In what turtle do you want to bet? {rainbow_colours}")
+
+
+# Create a list to store the turtles
+turtles_list = []
+position = -150
+# Use a loop to create multiple objects
+for i in range(len(rainbow_colours)):  # Creating 5 objects
+    new_turtle = turtle.Turtle("turtle")
+    new_turtle.color(rainbow_colours[i])
+    turtles_list.append(new_turtle)
+    new_turtle.penup()
+    new_turtle.goto(x=-230, y=position)
+    position += 50
+
+finish_line_draw()
+
+if user_bet:
+    is_race_on = True
+
+while is_race_on:
+
+    for turtle in turtles_list:
+        if turtle.xcor() > 219:
+            is_race_on = False
+            winning_color = turtle.pencolor()
+
+            if winning_color == user_bet:
+                print(f"You've won! The {winning_color} turtle is the winner!")
+                t.write(f"You've won! \n The {winning_color} turtle is the winner!", align="center", font=("Arial", 16, "normal"))
+            else:
+                print(f"You've lost :( \n The {winning_color} turtle is the winner!")
+                t.write(f"You've lost! The {winning_color} turtle is the winner!", align="center",
+                        font=("Arial", 16, "normal"))
+
+        rand_distance = random.randint(0, 10)
+
+        turtle.forward(rand_distance)
+
+screen.exitonclick()
