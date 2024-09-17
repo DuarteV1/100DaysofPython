@@ -1,0 +1,55 @@
+**Turtle Crossing Game
+Turtle Crossing is a Python-based game where the player controls a turtle trying to cross a road filled with moving cars. 
+The objective is to reach the finish line while avoiding collisions with the cars. As the player progresses, the speed of the cars increases.
+
+**Features
+Player Control: Move the turtle upwards to cross the road.
+Cars: Cars move from right to left and appear randomly.
+Scoreboard: Tracks the player's level and provides feedback on game completion.
+Levels: Each time the player reaches the finish line, the game speeds up.
+
+**How to Play
+Start the Game:
+Run the Python script to start the game.
+
+Control the Turtle:
+  Move Up: Press the Up arrow key to move the turtle upwards.
+  Objective:
+  Move the turtle from the bottom to the top of the screen without hitting any cars.
+  Scoring and Levels:
+  Level Up: The player levels up by reaching the top of the screen.
+  Speed Increase: Cars move faster as the player progresses through levels.
+  Game Over:
+  The game ends if the turtle collides with a car. The final score is displayed when the game ends.
+
+**How to Run
+Prerequisites
+Python 3.x must be installed on your machine.
+The turtle module (part of the standard Python library) is required.
+Running the Game
+Save all the game files (main.py, player.py, car_manager.py, and scoreboard.py) in the same directory.
+Open a terminal or command prompt.
+
+**The main script that initializes the game:
+Sets up the game screen.
+Creates player, car manager, and scoreboard objects.
+Handles the main game loop, including car creation, movement, collision detection, and score updates.
+player.py
+Contains the Player class:
+Initializes the player's turtle shape, position, and movement.
+Provides methods to move the turtle and check if it has reached the finish line.
+car_manager.py
+
+Contains the CarManager class:
+Manages the creation and movement of cars.
+Handles car speed and updates the speed as the player progresses through levels.
+scoreboard.py
+
+Contains the Scoreboard class:
+Manages and displays the player’s score and level.
+Updates the scoreboard when the player levels up or when the game is over.
+
+Customization
+Car Colors: Modify the colors of the cars in the CarManager class.
+Car Speed: Adjust the starting speed and speed increment for cars in the CarManager class.
+Player Appearance: Change the turtle shape and color in the Player class.
