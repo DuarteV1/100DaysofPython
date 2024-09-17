@@ -1,0 +1,70 @@
+Snake Game
+
+  This is a Python implementation of the classic Snake Game using the turtle module. 
+  In this game, you control a snake that moves around the screen, eats food to grow longer, and avoids collisions with the walls and its own tail. 
+  The game tracks the current score and high score.
+
+Game Objective
+
+  Control the snake to eat the food while avoiding hitting the walls or the snake's own tail.
+  The snake grows longer each time it eats food.
+  If the snake hits a wall or its own tail, the game resets, but the highest score is saved.
+
+Features
+
+  Customizable Snake Shape: Before starting the game, you can choose the shape of the snake from a list of turtle shapes (arrow, circle, classic, square, triangle, turtle).
+  Random Food Placement: The food appears in random locations each time it is eaten.
+  Score Tracking: The scoreboard keeps track of the current score and the highest score.
+  Collision Detection: The game ends when the snake collides with a wall or its own tail.
+  Reset Functionality: After losing, the snake resets to its starting size, but the highest score remains until a new high score is achieved.
+
+How to Play
+
+  Start the Game:
+  Run the Python script and enter the shape you want the snake to have (e.g., "turtle", "circle", etc.).
+
+  Control the Snake:
+  Use the arrow keys to move the snake:
+  Up: Move up.
+  Down: Move down.
+  Left: Move left.
+  Right: Move right.
+
+  Goal:
+  Eat the blue food that appears randomly on the screen to grow longer.
+  Avoid colliding with the walls or your own snake's tail.
+
+  Scoring:
+  Every time the snake eats food, you earn a point.
+  If you collide with a wall or tail, the game resets and your score returns to 0, but your highest score is retained.
+
+How to Run
+
+  Prerequisites
+  Python 3.x must be installed on your machine.
+  The turtle module (part of the standard Python library) is required.
+  Running the Game
+  Save all the game files (snake.py, screen.py, food.py, scoreboards.py, and the main script) in the same directory.
+  Open a terminal or command prompt and run the main script.
+  Follow the on-screen prompts to choose the snake's shape and start playing!
+ 
+snake.py
+  This file contains the Snake class, which handles the snake's movement and behavior:
+  The snake is initialized with 3 segments.
+  It moves forward automatically and changes direction based on user input.
+  The snake can grow longer by extending its segments when it eats food.
+  Includes functions to reset the snake if a collision occurs.
+
+screen.py
+  This file contains the SnakeScreen class that sets up the game window with a black background and dimensions of 600x600 pixels.
+
+food.py
+  This file contains the Food class, which handles the appearance and random placement of the food on the screen. Each time the snake eats the food, the food is relocated randomly.
+
+scoreboards.py
+  This file contains the ScoreBoard class, which manages the score and high score display. It reads from a data.txt file to store the highest score across game sessions.
+This file contains the ScoreBoard class, which manages the score and high score display. It reads from a data.txt file to store the highest score across game sessions.
+
+Customization
+  Snake Shape: When prompted at the start, you can choose the shape of the snake from arrow, circle, classic, square, triangle, and turtle.
+  High Score Tracking: The highest score is saved in a data.txt file. This allows the high score to persist even when the game is restarted.
