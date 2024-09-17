@@ -1,0 +1,65 @@
+Pong Game
+This is a Python-based implementation of the classic Pong Game using the turtle module. 
+The game features two paddles, a ball, and a scoreboard. 
+Players control the paddles to hit the ball back and forth, aiming to score points by getting the ball past the opponent's paddle.
+
+How the Game Works
+
+Objective: Use your paddle to hit the ball and prevent it from passing your side of the screen. Score points by getting the ball past the opponent’s paddle.
+Gameplay:
+  Paddles: Controlled by the players. One player uses the Up and Down arrow keys, while the other player uses the W and S keys.
+  Ball: Moves across the screen and bounces off walls and paddles.
+  Scoreboard: Keeps track of scores for both players.
+  Features
+  Two Paddles: Each player controls one paddle to hit the ball.
+  Ball Movement: The ball moves and bounces off the paddles and walls.
+  Scoring System: The scoreboard tracks and displays the score for both players.
+  Collision Detection: Detects collisions between the ball and paddles or walls, adjusting the ball’s direction accordingly.
+  Score Updates: Points are scored when the ball passes a paddle, and the scoreboard updates accordingly.
+
+How to Play
+
+Control the Paddles:
+Right Paddle (Player 1):
+Up Arrow Key: Move the paddle up.
+Down Arrow Key: Move the paddle down.
+Left Paddle (Player 2):
+W Key: Move the paddle up.
+S Key: Move the paddle down.
+
+Objective:
+Hit the ball with your paddle to keep it in play.
+Score a point by getting the ball past your opponent's paddle.
+
+Scoring:
+Points are awarded when the ball passes a paddle.
+The game continues until you close the game window.
+
+Prerequisites:
+Python 3.x must be installed on your machine.
+The turtle module (part of the standard Python library) is required.
+Running the Game
+Save all the game files (main.py, paddle.py, ball.py, and scoreboard.py) in the same directory.
+
+The main script that initializes the game:
+
+Sets up the game screen.
+Creates paddles and ball objects.
+Handles the main game loop, including ball movement, collision detection, and score updates.
+paddle.py
+
+Contains the Paddle class:
+Initializes the paddle's shape, size, and position.
+Provides methods to move the paddle up and down.
+ball.py
+Contains the Ball class:
+Initializes the ball’s shape and movement.
+Provides methods to move the ball, bounce off walls and paddles, and reset its position.
+scoreboard.py
+Contains the Scoreboard class:
+Manages and displays the scores for both players.
+Updates the scoreboard when a player scores a point.
+
+Customization
+Paddle and Ball Appearance: Modify the shapes and colors of the paddles and ball in their respective classes (paddle.py and ball.py).
+Scoreboard Font: Change the font size and style in the Scoreboard class if desired.
