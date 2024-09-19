@@ -1,0 +1,38 @@
+Pomodoro Timer
+This Pomodoro Timer is a simple time management application designed to help improve focus and productivity. 
+The app is based on the Pomodoro Technique, where you work for 25 minutes, take short breaks for 5 minutes, and after completing 4 work sessions, you take a longer break of 20 minutes.
+
+How to Use
+Start the Timer: Click the "Start" button to begin the first work session.
+Work Sessions: You will be prompted to work for 25 minutes.
+Short Breaks: After each work session, you will have a 5-minute short break.
+Long Breaks: After completing 4 work sessions, a 20-minute long break will follow.
+Reset Timer: Click the "Reset" button to stop the current session and reset the timer to the initial state.
+The app keeps track of the number of work sessions completed and displays checkmarks (✔) to represent each session.
+
+Features
+Work Sessions: 25-minute focus periods.
+Short Breaks: 5-minute breaks between work sessions.
+Long Breaks: 20-minute breaks after completing 4 work sessions.
+Reset Functionality: Allows you to reset the timer at any time.
+Visual Countdown: Displays the countdown timer in a visual format using a tomato image.
+
+Requirements
+Python 3.x installed.
+Tkinter: Tkinter is included with Python's standard library, so no additional installation is needed.
+Math Module: The math module is part of Python's standard library.
+
+Setup
+Clone or download this repository to your local machine.
+Ensure you have a file named tomato.png in the same directory as the script. This image will be used as part of the timer interface.
+Running the Program
+Open a terminal or command prompt.
+
+Navigate to the directory where the script is located.
+
+User Interface Elements
+Start Button: Starts the countdown for the work session.
+Reset Button: Resets the timer to its initial state.
+Checkmark Display: A visual representation of completed work sessions.
+Timer Label: Displays whether it's time to work, take a short break, or take a long break.
+Enjoy using the Pomodoro Timer to boost your productivity!
