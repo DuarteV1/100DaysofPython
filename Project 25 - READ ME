@@ -1,0 +1,47 @@
+U.S. States Game
+This is a fun, interactive game that helps you learn the names and locations of the U.S. states.
+The goal of the game is to correctly guess all 50 states by typing their names. 
+When you guess correctly, the state's name is displayed on a map of the United States. 
+If you're unable to guess all the states, you can export a list of the states you missed to review later.
+
+How to Play
+The game displays a blank map of the U.S. with no state names.
+You are prompted to enter the name of a U.S. state.
+For each correct guess, the name of the state appears at its location on the map.
+The game keeps track of how many states you’ve guessed correctly.
+Type "Exit" to stop the game early and get a list of the states you missed, which will be saved in a file called States_to_learn.csv.
+
+Requirements
+Python 3.x installed on your machine.
+
+Files
+50_states.csv: A CSV file containing the names of the U.S. states along with their x and y coordinates on the map.
+blank_states_img.gif: A blank image of the United States map that will be used in the game.
+States_to_learn.csv: A file that is generated when you exit the game early. It contains the states you didn’t guess correctly.
+
+Setup and Instructions
+1. Install Dependencies
+Make sure you have the pandas and turtle modules available. If not, you can install pandas with:
+pip install pandas
+turtle is part of Python’s standard library, so no separate installation is required.
+
+2. Prepare the Files
+Ensure the 50_states.csv file and the blank_states_img.gif map image are in the same directory as the Python script.
+
+3. Running the Game
+Run the script by executing the following command in your terminal:
+
+4. Playing
+You will be prompted to guess the name of a U.S. state.
+Type the name of a state and hit Enter.
+If correct, the state’s name will appear on the map at the correct location.
+You can type "Exit" anytime to stop the game. The remaining states will be saved to a file called States_to_learn.csv.
+5. Completing the Game
+The game continues until you’ve guessed all 50 states or type "Exit."
+Once the game ends, a list of the states you missed will be saved to States_to_learn.csv.
+
+Customization
+You can customize the game by modifying certain parameters:
+
+Map Image: Replace blank_states_img.gif with any other map or image to create different guessing games.
+CSV File: Modify the 50_states.csv file to change the states or locations.
