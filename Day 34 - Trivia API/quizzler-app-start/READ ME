@@ -1,0 +1,69 @@
+Quiz Application
+  This is a Python-based quiz game built with a graphical user interface (GUI) using Tkinter. 
+  It fetches quiz questions from the Open Trivia Database API and provides a True/False quiz format. 
+  The player's score is updated after every question, and the game ends when the player has answered all questions.
+
+Features
+  Question Bank: Automatically fetches trivia questions from the Open Trivia Database (OpenTDB) API.
+  True/False Quiz: The quiz consists of True/False questions.
+  GUI: Provides a clean, user-friendly graphical interface using Tkinter.
+  Score Tracking: Displays the user's score as they answer the questions.
+  Feedback: Provides feedback on whether the user answered correctly or incorrectly by changing the background color of the question canvas.
+  End of Quiz: Notifies the user when they’ve reached the end of the quiz.
+
+How It Works
+  Fetch Questions: The app fetches a set of True/False questions from the OpenTDB API.
+  Answer Questions: The user can answer each question by clicking the "True" or "False" button.
+  Score Updates: The score is updated based on the user's correct answers.
+  Feedback: The app provides feedback for each answer (green for correct and red for incorrect).
+  End of Quiz: Once all questions have been answered, the app displays a message that the quiz has ended and disables the buttons.
+
+Files
+  1. main.py
+    This is the entry point of the application. 
+    It initializes the QuizBrain and QuizInterface objects and starts the game.
+  2. question_model.py
+    This file defines the Question class, which models a quiz question. Each question has:
+    text: The question's text.
+    answer: The correct answer (True/False).
+  3. quiz_brain.py
+    This file contains the QuizBrain class, which manages the game logic. It:
+      Keeps track of the current question and score.
+      Retrieves the next question.
+      Checks if the user's answer is correct.
+      Keeps track of whether there are more questions left.
+  4. ui.py
+    This file contains the QuizInterface class, which manages the graphical user interface using Tkinter. It:
+      Displays the current question.
+      Provides buttons for the user to submit their answers.
+      Updates the score and gives feedback after each question.
+      Disables the buttons when the quiz is finished.
+  5. data.py
+  This file is responsible for fetching quiz questions from the Open Trivia Database API. It:
+    Sends an HTTP GET request to the API.
+    Retrieves a set of True/False questions.
+    Parses the response and stores the questions in a question_data list.
+
+ 
+Prerequisites
+  Python 3.x installed on your system
+  Internet connection to fetch questions from the API
+  Libraries: requests, tkinter
+  Installation Steps
+  Clone or download this repository.
+
+Usage
+  When you run the application, a window will open with a question and two buttons: "True" and "False".
+  Click one of the buttons to answer the question.
+  The background of the question area will change color to indicate whether your answer was correct or incorrect (green for correct, red for incorrect).
+  Your score will update at the top.
+  The game continues until all questions have been answered. When the quiz ends, the app will display a message indicating the end of the quiz.
+
+API Reference
+  Open Trivia Database API: This app uses the Open Trivia Database API to fetch True/False questions.
+  Notes
+  The html.unescape() function is used in quiz_brain.py to decode any HTML entities that may appear in the questions fetched from the API.
+
+Troubleshooting
+  Question Data Errors: If the API is down or not responding, ensure you have an active internet connection and try again.
+  Image Loading Issues: Make sure the true.png and false.png images are located in the images/ folder as expected.
