@@ -1,0 +1,42 @@
+Flashcard Learning App
+  This is a simple flashcard learning application built using Python's Tkinter library. 
+  It displays a random French word on a card, and after a short delay, flips the card to reveal the English translation. 
+  The app allows users to mark words they know, and automatically generates a list of words they still need to learn.
+
+Features
+  Random Word Display: A random French word is shown to the user.
+  Card Flip: After 3 seconds, the card flips to reveal the English translation of the word.
+  Known/Unknown Word Tracking: Users can mark words they know. Known words are removed from the learning list, and the remaining words are saved for the next session.
+  Data Persistence: The words the user still needs to learn are saved in a CSV file and reloaded the next time the app is opened.
+
+How to Use
+  Launch the App: When you start the app, it will display a random French word.
+  Mark as Known: If you know the word, press the button with the check mark. The word will be removed from your learning list.
+  Next Word: If you don’t know the word, press the button with the cross to skip to the next word.
+  Repeat: The app will continue cycling through words until you mark all words as known.
+
+Files Needed
+French Words CSV: The app reads from a CSV file named french_words.csv located in the data folder. This file should contain two columns: French (for the French words) and English (for the corresponding translations).
+Images: The app uses several images (PNG files) for visual representation:
+  card_front.png: The front side of the flashcard.
+  card_back.png: The back side of the flashcard.
+  right.png: The button icon for marking a word as known.
+  wrong.png: The button icon for skipping to the next word.
+  Ensure these images are placed in the images folder inside the app directory.
+
+Data Persistence
+If the user marks a word as known, the app saves the remaining words in a file named words_to_learn.csv. 
+The next time the app is opened, it will load words from this file instead of the original french_words.csv file. 
+If words_to_learn.csv does not exist, the app will use french_words.csv.
+
+Requirements
+Python 3.x
+Tkinter: Tkinter is included with Python's standard library.
+Pandas: The app uses the pandas library to handle CSV files.
+
+Ensure that the necessary images and CSV files are in the correct locations (images/ and data/ directories).
+
+Customization
+Change Language: To change the language or words used, modify the CSV file with the words you want to learn. 
+Ensure the CSV has two columns: the first for the foreign language and the second for the English translations.
+Change Time: To modify the flip time, adjust the flip_timer in the random_word() function.
