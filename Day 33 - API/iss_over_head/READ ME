@@ -1,0 +1,42 @@
+ISS Tracker and Email Notifier
+  This Python program tracks the International Space Station (ISS) and sends an email notification if the ISS is passing close to a specified location and it is currently dark at that location.
+
+Features
+  ISS Position Tracking: Uses the ISS API to get the current latitude and longitude of the ISS.
+  Proximity Detection: Checks if the ISS is within ±5 degrees of the user's specified location (latitude and longitude).
+  Day/Night Check: Determines whether it is currently dark at the user's location using the Sunrise-Sunset API.
+  Email Notification: If the ISS is nearby and it's dark, the program sends an email to notify the user to "look up" and spot the ISS.
+  Continuous Monitoring: The program runs every 60 seconds and continuously checks the conditions.
+
+How It Works
+  Check ISS Position: The program requests the current position of the ISS from the Open Notify ISS API.
+  Determine Proximity: It compares the ISS's position with the user’s location (latitude and longitude) to check if the ISS is within a 5-degree range.
+  Day/Night Check: The program checks if it is currently dark at the user’s location by retrieving the sunrise and sunset times from the Sunrise-Sunset API.
+  Send Notification: If both conditions (proximity and darkness) are met, the program sends an email to the user to notify them that the ISS is overhead.
+  Loop: The program runs continuously, checking the conditions every 60 seconds.
+  Installation and Setup
+
+Prerequisites
+  Python 3.x installed on your machine
+  Internet connection to access the ISS and Sunrise-Sunset APIs
+  A Gmail account (or other SMTP email service) to send notifications
+  Libraries Required
+    requests: To make API calls to the ISS position and Sunrise-Sunset APIs
+    smtplib: For sending email notifications
+    datetime: To handle time-related tasks
+    time: To manage time delays between checks
+
+Steps to Set Up
+  Clone or download this repository to your local machine.
+  Replace your_email@gmail.com with your actual email address.
+  Replace your_password with your email account password (or app password if using Gmail).
+  Replace recipient_email@gmail.com with the recipient email where you want to receive notifications.
+  Modify the latitude and longitude in the script (MY_LAT and MY_LONG) to your current location.
+
+API References
+  ISS Location API: Open Notify ISS API
+  Sunrise and Sunset Times API: Sunrise-Sunset API
+
+Troubleshooting
+  Email Issues: Make sure you have enabled "Less secure app access" on your Gmail account or use an app-specific password.
+  ISS Position Not Updating: The ISS API may occasionally fail due to network issues. If the program encounters an error, try restarting it.
